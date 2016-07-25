@@ -10,10 +10,12 @@ function activate(context) {
     // Use the console to output diagnostic information (console.log) and errors (console.error)
     // This line of code will only be executed once when your extension is activated
     //console.log('Congratulations, your extension "qiniu-upload-image" is now active!');
-
+    var window = vscode.window;
     var config = vscode.workspace.getConfiguration('qiniu');
+    
 
     if(!config.enable) return;
+
     
     // The command has been defined in the package.json file
     // Now provide the implementation of the command with  registerCommand
@@ -21,22 +23,38 @@ function activate(context) {
     var disposable = vscode.commands.registerCommand('extension.qiniu.upload', function () {
         // The code you place here will be executed every time your command is executed
 
+        var editor = window.activeTextEditor;
+
+        if (!editor) {
+            window.showErrorMessage("没有打开编辑窗口");
+            return;
+        }
+
         // Display a message box to the user
         //vscode.window.showInformationMessage('插件就绪!');
-        vscode.window.showInputBox({
+        window.showInputBox({
             placeHolder: '输入一个本地图片地址'
         }).then(function(path){
+
             return qnUpload(config, path);
+
         }, function(err){
-           vscode.window.showErrorMessage(err);
+
+           window.showErrorMessage(err);
+
         }).then(function(ret){
-            vscode.window.showInformationMessage(ret);
+
+            var img = '!['+ ret.name +']('+ ret.url +')';
+            editor.edit(function(textEditorEdit) {
+                textEditorEdit.insert(editor.selection.active, img);
+            })
+
         }, function(err){
-            vscode.window.showErrorMessage(err);
+
+            window.showErrorMessage(err);
+
         });
         
-        //vscode.commands.executeCommand('vscode.workbench.action.files.openFile')
-        //console.log(vscode.clipboard.getContent());
     });
 
     context.subscriptions.push(disposable);

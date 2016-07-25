@@ -1,63 +1,26 @@
-# qiniu-upload-image README
+# qiniu-upload-image
 
-This is the README for your extension "qiniu-upload-image". After writing up a brief description, we recommend including the following sections.
+一个VS Code插件，写Markdown时可以快捷上传本地图片获取七牛图床外链。
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+![priview](http://7ximpj.com1.z0.glb.clouddn.com/vscode-qiniu.GIF)
 
-For example if there is an image subfolder under your extension project workspace:
+> Tip: 只有在编辑Markdown时插件才可使用，启动快捷键 Windows `Ctrl+Q`，Mac `cmd+q`。
 
-\!\[feature X\]\(images/feature-x.png\)
+## User Settings
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+| properties | type   |  default  | description  |
+| --------   | :----:  | :----:  |  :----:  |
+| qiniu.enable | boolean |  false  | 插件开关 |
+| qiniu.access_key |  string   |      | 一个有效的七牛 AccessKey 签名授权 |
+| qiniu.secret_key |  string  |    | 一个有效的七牛 SecretKey 签名授权 |
+| qiniu.bucket |  string  |    | 七牛图片上传空间 |
+| qiniu.remotePath |  string  |  `${fileName}` | 七牛图片上传路径，参数化命名，暂时支持 `${fileName}`、`${date}`、`${dateTime}`，如：`${fileName}-${date}` 生成格式为 `picName-20160725.jpg`|
+| qiniu.domain |  string  |    | 七牛图床域名 |
 
-## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on OSX or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on OSX or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (OSX) to see a list of Markdown snippets
-
-### For more information
+## For more information
 
 * [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
 * [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)

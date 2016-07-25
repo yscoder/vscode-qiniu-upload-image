@@ -8,10 +8,10 @@
     "vscode": "^1.0.0"
   },
   "categories": [
-    "Other"
+    "Productivity"
   ],
-  "activationEvents": [     // 插件启动方式，在何时激活
-    "onLanguage:markdown"   // 使用语言激活：markdown
+  "activationEvents": [     
+    "onLanguage:markdown"   
   ],
   "main": "./extension",
   "contributes": {
@@ -19,7 +19,7 @@
         "command": "extension.qiniu.upload",
         "key": "ctrl+q",
         "mac": "cmd+q",
-        "when": "editorTextFocus && editorLangId == 'markdown'" // 编辑器具有焦点且为markdown语言
+        "when": "editorTextFocus && editorLangId == 'markdown'" 
     }],
     "configuration": {
         "type": "object",
@@ -42,7 +42,7 @@
             },
             "qiniu.bucket": {
                 "type": "string",
-                "default": null,
+                "default": "",
                 "description": "七牛图片上传空间."
             },
             "qiniu.remotePath": {
@@ -67,5 +67,9 @@
   "dependencies": {
     "qiniu": "^6.1.11"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+      "type": "git",
+      "url": "git+https://github.com/yscoder/vscode-qiniu-upload-image.git"
+  }
 }
