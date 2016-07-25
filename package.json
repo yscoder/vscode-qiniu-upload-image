@@ -1,0 +1,71 @@
+{
+  "name": "qiniu-upload-image",
+  "displayName": "qiniu-upload-image",
+  "description": "七牛图床工具",
+  "version": "0.0.1",
+  "publisher": "imys",
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [     // 插件启动方式，在何时激活
+    "onLanguage:markdown"   // 使用语言激活：markdown
+  ],
+  "main": "./extension",
+  "contributes": {
+    "keybindings": [{
+        "command": "extension.qiniu.upload",
+        "key": "ctrl+q",
+        "mac": "cmd+q",
+        "when": "editorTextFocus && editorLangId == 'markdown'" // 编辑器具有焦点且为markdown语言
+    }],
+    "configuration": {
+        "type": "object",
+        "title": "qiniu configuration",
+        "properties": {
+            "qiniu.enable": {
+                "type": "boolean",
+                "default": false,
+                "description": "七牛图片上传工具开关"
+            },
+            "qiniu.access_key": {
+                "type": "string",
+                "default": "",
+                "description": "一个有效的七牛 AccessKey 签名授权。"
+            },
+            "qiniu.secret_key": {
+                "type": "string",
+                "default": "",
+                "description": "一个有效的七牛 SecretKey 签名授权。"
+            },
+            "qiniu.bucket": {
+                "type": "string",
+                "default": null,
+                "description": "七牛图片上传空间."
+            },
+            "qiniu.remotePath": {
+                "type": "string",
+                "default": "${fileName}",
+                "description": "七牛图片上传路径，参数化命名。"
+            },
+            "qiniu.domain": {
+                "type": "string",
+                "default": "",
+                "description": "七牛图床域名。"
+            }
+        }
+    }
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "vscode": "^0.11.0"
+  },
+  "dependencies": {
+    "qiniu": "^6.1.11"
+  },
+  "license": "MIT"
+}
