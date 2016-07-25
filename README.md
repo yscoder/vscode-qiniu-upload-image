@@ -4,7 +4,7 @@
 
 ## Features
 
-![priview](http://7ximpj.com1.z0.glb.clouddn.com/vscode-qiniu.GIF)
+![priview](https://github.com/yscoder/vscode-qiniu-upload-image/raw/master/features/vscode-qiniu.gif)
 
 > Tip: 只有在编辑Markdown时插件才可使用，启动快捷键 Windows `Ctrl+Q`，Mac `cmd+q`。
 
