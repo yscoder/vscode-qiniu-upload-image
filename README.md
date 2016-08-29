@@ -8,16 +8,43 @@
 
 > Tip: 只有在编辑Markdown时插件才可使用，启动快捷键 Windows `Ctrl+Q`，Mac `cmd+q`。
 
+## Install
+
+`Ctrl+Q` 输入命令：
+
+```
+ext install qiniu-upload-image
+```
+
 ## User Settings
 
-| properties | type   |  default  | description  |
-| --------   | :----:  | :----:  |  :----:  |
-| qiniu.enable | boolean |  false  | 插件开关 |
-| qiniu.access_key |  string   |      | 一个有效的七牛 AccessKey 签名授权 |
-| qiniu.secret_key |  string  |    | 一个有效的七牛 SecretKey 签名授权 |
-| qiniu.bucket |  string  |    | 七牛图片上传空间 |
-| qiniu.remotePath |  string  |  `${fileName}` | 七牛图片上传路径，参数化命名，暂时支持 `${fileName}`、`${date}`、`${dateTime}`，如：`${fileName}-${date}` 生成格式为 `picName-20160725.jpg`|
-| qiniu.domain |  string  |    | 七牛图床域名 |
+```json
+{
+    // 插件开关
+    "qiniu.enable": true,
+
+    // 一个有效的七牛 AccessKey 签名授权
+    "qiniu.access_key": "*****************************************",
+
+    // 一个有效的七牛 SecretKey 签名授权
+    "qiniu.secret_key": "*****************************************",
+
+    // 七牛图片上传空间
+    "qiniu.bucket": "ysblog",
+
+    // 七牛图片上传路径，参数化命名，暂时支持 ${fileName}、${date}、${dateTime}
+    // 如：${fileName}-${date} 生成格式为 picName-20160725.jpg
+    "qiniu.remotePath": "${fileName}",
+
+    // 七牛图床域名
+    "qiniu.domain": "http://xxxxx.xxxx.com"
+}
+```
+
+## Repository
+
+[https://github.com/yscoder/vscode-qiniu-upload-image](https://github.com/yscoder/vscode-qiniu-upload-image)
+
 
 
 ## For more information
