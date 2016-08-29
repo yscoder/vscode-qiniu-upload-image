@@ -18,7 +18,7 @@ ext install qiniu-upload-image
 
 ## User Settings
 
-```json
+```js
 {
     // 插件开关
     "qiniu.enable": true,
