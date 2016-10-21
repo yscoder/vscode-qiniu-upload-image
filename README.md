@@ -6,11 +6,11 @@
 
 ![priview](https://raw.githubusercontent.com/yscoder/vscode-qiniu-upload-image/master/features/preview.gif)
 
-> Tip: 只有在编辑Markdown时插件才可使用，启动快捷键 Windows `Ctrl+Q`，Mac `cmd+q`。
+> Tip: 只有在编辑Markdown时插件才可使用，启动快捷键 Windows `Ctrl+Q`，Mac `Cmd+Shift+Q`。
 
 ## Install
 
-`Ctrl+Q` 输入命令：
+`Ctrl+Shift+P` 输入命令：
 
 ```
 ext install qiniu-upload-image
