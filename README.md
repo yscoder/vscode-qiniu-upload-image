@@ -10,7 +10,7 @@
 
 ## Install
 
-`Ctrl+Shift+P` 输入命令：
+`Ctrl+P` 输入命令：
 
 ```
 ext install qiniu-upload-image

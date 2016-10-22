@@ -2,7 +2,7 @@
     "name": "qiniu-upload-image",
     "displayName": "qiniu-upload-image",
     "description": "Picture upload generate markdown link format.",
-    "version": "0.0.4",
+    "version": "0.0.6",
     "publisher": "imys",
     "engines": {
         "vscode": "^1.0.0"
