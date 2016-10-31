@@ -6,7 +6,7 @@
 
 ![priview](https://raw.githubusercontent.com/yscoder/vscode-qiniu-upload-image/master/features/preview.gif)
 
-> Tip: 只有在编辑Markdown时插件才可使用，启动快捷键 Windows `Ctrl+Q`，Mac `Cmd+Shift+Q`。
+> Tip: 只有在编辑Markdown时插件才可使用，启动快捷键 `Ctrl+Q`。
 
 ## Install
 
