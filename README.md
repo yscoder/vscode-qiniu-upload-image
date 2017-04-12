@@ -1,18 +1,18 @@
 # qiniu-upload-image
 
-一个VS Code插件，写Markdown时可以快捷上传本地图片获取七牛图床外链。
+一个 VS Code 插件，写 Markdown 时可以快捷上传本地图片获取七牛图床外链。
 
 ## Features
 
 ![priview](https://raw.githubusercontent.com/yscoder/vscode-qiniu-upload-image/master/features/preview.gif)
 
-> Tip: 只有在编辑Markdown时插件才可使用，启动快捷键 `Ctrl+Q`。
+> Tips: 只有在编辑 Markdown 时插件才可使用，启动快捷键 `Ctrl+Q`。
 
 ## Install
 
 `Ctrl+P` 输入命令：
 
-```
+```bash
 ext install qiniu-upload-image
 ```
 
@@ -32,8 +32,10 @@ ext install qiniu-upload-image
     // 七牛图片上传空间
     "qiniu.bucket": "ysblog",
 
-    // 七牛图片上传路径，参数化命名，暂时支持 ${fileName}、${date}、${dateTime}
-    // 如：${fileName}-${date} 生成格式为 picName-20160725.jpg
+    // 七牛图片上传路径，参数化命名，暂时支持 ${fileName}、${mdFileName}、${date}、${dateTime}
+    // 示例：
+    //   ${fileName}-${date} -> picName-20160725.jpg
+    //   ${mdFileName}-${dateTime} -> markdownName-20170412222810.jpg
     "qiniu.remotePath": "${fileName}",
 
     // 七牛图床域名
@@ -44,12 +46,5 @@ ext install qiniu-upload-image
 ## Repository
 
 [https://github.com/yscoder/vscode-qiniu-upload-image](https://github.com/yscoder/vscode-qiniu-upload-image)
-
-
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
 
 **Enjoy!**
