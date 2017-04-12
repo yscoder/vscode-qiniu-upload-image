@@ -1,6 +1,7 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 var vscode = require('vscode');
+var path = require('path');
 var qnUpload = require('./lib/upload');
 
 // this method is called when your extension is activated
@@ -22,8 +23,9 @@ function activate(context) {
     // The commandId parameter must match the command field in package.json
     var disposable = vscode.commands.registerCommand('extension.qiniu.upload', function () {
         // The code you place here will be executed every time your command is executed
-
         var editor = window.activeTextEditor;
+        var mdFilePath = editor.document.fileName;
+        var mdFileName = path.basename(mdFilePath, path.extname(mdFilePath));
 
         if (!editor) {
             window.showErrorMessage("没有打开编辑窗口");
@@ -36,7 +38,7 @@ function activate(context) {
             placeHolder: '输入一个本地图片地址'
         }).then(function(path){
 
-            return qnUpload(config, path);
+            return qnUpload(config, path, mdFileName);
 
         }, function(err){
 
