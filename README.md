@@ -1,12 +1,19 @@
 # qiniu-upload-image
 
-一个 VS Code 插件，写 Markdown 时可以快捷上传本地图片获取七牛图床外链。
+一个 VS Code 插件，编写 Markdown 时可以快捷上传本地图片获取七牛图床外链。
 
 ## Features
 
-![priview](https://raw.githubusercontent.com/yscoder/vscode-qiniu-upload-image/master/features/preview.gif)
+![priview](https://raw.githubusercontent.com/yscoder/vscode-qiniu-upload-image/master/features/demo.gif)
 
-> Tips: 只有在编辑 Markdown 时插件才可使用，启动快捷键 `Ctrl+Q`。
+> Tips: 只有在编辑 Markdown 时插件才可使用。
+
+## Usage
+
+1. 粘贴图片路径上传：`SHIFT + P`
+2. 直接选择图片上传：`SHIFT + O`
+
+> 功能2 需要升级 vscode 到 v1.17+
 
 ## Install
 

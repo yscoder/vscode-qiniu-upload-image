@@ -2,7 +2,7 @@
     "name": "qiniu-upload-image",
     "displayName": "qiniu-upload-image",
     "description": "Picture upload generate markdown link format.",
-    "version": "0.1.1",
+    "version": "1.0.0",
     "publisher": "imys",
     "engines": {
         "vscode": "^1.0.0"
@@ -18,8 +18,14 @@
         "keybindings": [
             {
                 "command": "extension.qiniu.upload",
-                "key": "ctrl+q",
-                "mac": "ctrl+q",
+                "key": "shift+p",
+                "mac": "shift+p",
+                "when": "editorTextFocus && editorLangId == 'markdown'"
+            },
+            {
+                "command": "extension.qiniu.select",
+                "key": "shift+o",
+                "mac": "shift+o",
                 "when": "editorTextFocus && editorLangId == 'markdown'"
             }
         ],
