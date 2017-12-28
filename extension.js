@@ -7,7 +7,7 @@ const upload = (config, fsPath) => {
 
     const editor = window.activeTextEditor
     const mdFilePath = editor.document.fileName
-    const mdFileName = path.basename(mdFilePath, path.extname(mdFilePath))
+    const mdFileName = path.win32.basename(mdFilePath, path.extname(mdFilePath))
 
     return qnUpload(config, fsPath, mdFileName).then(({ name, url }) => {
         console.log('Upload success!')

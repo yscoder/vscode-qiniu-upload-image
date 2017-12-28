@@ -2,5 +2,4 @@
 typings/**
 test/**
 .gitignore
-jsconfig.json
 *.vsix
