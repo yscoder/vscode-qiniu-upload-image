@@ -41,7 +41,7 @@ exports.activate = context => {
         }
 
         window.showInputBox({
-            placeHolder: '输入一个本地图片地址'
+            placeHolder: '输入一个图片地址'
         })
         .then(fsPath => upload(config, fsPath), error)
     })
