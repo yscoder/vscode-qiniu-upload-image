@@ -1,6 +1,6 @@
 const { window, commands, workspace } = require('vscode')
 const path = require('path')
-const qnUpload = require('./lib/upload')
+const qnUpload = require('./lib/uploadqn')
 
 const upload = (config, fsPath) => {
     if(!fsPath) return
